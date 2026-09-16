@@ -1,217 +1,254 @@
-# Amazon Sales Dashboard
+# Amazon Sales Dashboard & Analysis
 
-A comprehensive Power BI dashboard analyzing Amazon sales data with interactive visualizations, trend analysis, and data-driven insights.
+A professional data analytics portfolio project analyzing 4 years of Amazon sales data with interactive visualizations, comprehensive data cleaning, and business insights.
 
 ## 📊 Project Overview
 
-This project showcases a complete data analysis workflow from raw data to interactive Power BI dashboard. It includes data cleaning, Python-based analysis, and multiple visualization outputs to understand sales patterns, product performance, and temporal trends.
+This project demonstrates end-to-end data analysis workflow: from raw data to cleaned dataset to interactive dashboard. The analysis covers 88,947 sales transactions spanning January 2019 to December 2022, revealing key sales drivers, product performance patterns, and customer engagement insights.
 
-### Key Features
-- **Interactive Power BI Dashboard** - Explore sales metrics with drill-down capabilities
-- **Data Cleaning Pipeline** - Python scripts to preprocess and clean raw data
-- **Multi-format Exports** - CSV files for key metrics and insights
-- **HTML Dashboard** - Standalone web-based dashboard for easy sharing
-- **Comprehensive Documentation** - Step-by-step instructions for setup and usage
+**Total Revenue Analyzed:** $8.41M | **Items Sold:** 88,947 | **Customer Reviews:** 58.5M
 
-## 📁 Project Structure
+## 🎯 Business Questions Addressed
 
-```
-amazon-sales-dashboard/
-├── amazon dash board.pbix          # Main Power BI dashboard file
-├── Amazon_Combined_Data.xlsx       # Raw Amazon sales data
-├── Amazon_Combined_Data_Cleaned.xlsx # Cleaned and processed data
-├── create_dashboard_data.py        # Script to generate dashboard datasets
-├── analyze_data.py                 # Data analysis and insights generation
-├── create_html_dashboard.py        # Script to generate HTML dashboard
-├── Amazon_Sales_Dashboard.html     # Standalone HTML dashboard
-├── DashboardInfo.json              # Dashboard metadata and configuration
-├── summary.json                    # Analysis summary and statistics
-├── PowerBI_Dashboard_Instructions.md # Setup and usage guide
-├── DATA_ANALYSIS_SUMMARY.md        # Detailed analysis findings
-├── README.md                       # This file
-├── .gitignore                      # Git ignore rules
-│
-└── Exports (CSV files)/
-    ├── SalesByMonth.csv            # Monthly sales trends
-    ├── SalesByYear.csv             # Yearly performance
-    ├── SalesByCategory.csv         # Sales by product category
-    ├── SalesByDayOfWeek.csv        # Day-of-week patterns
-    ├── SalesByPriceRange.csv       # Sales distribution by price
-    ├── Top5Products.csv            # Top 5 products overall
-    └── Top5ProductsByYear.csv      # Top 5 products per year
-```
+This analysis answers critical business questions:
 
-## 🎯 Key Metrics & Insights
+- **Which product categories drive the most revenue?**
+  - Camera and Men's Shoes combined account for 56% of total sales ($4.7M)
 
-The dashboard analyzes:
+- **What are the top-performing products?**
+  - Atomos Ninja V Camera leads with $107K in sales
+  - Identified 5 consistent top performers across the dataset
 
-- **Sales Performance**: Total sales, revenue trends, and growth rates
-- **Product Analysis**: Top-performing products and categories
-- **Temporal Patterns**: Monthly, yearly, and day-of-week trends
-- **Price Analysis**: Sales distribution across price ranges
-- **Seasonal Trends**: Identification of peak and low seasons
+- **How do sales vary by season and day of week?**
+  - Peak sales occur in September-December (Q4)
+  - September 2019 recorded highest monthly sales ($193K)
 
-## 🛠️ Tech Stack
+- **What price points generate the most revenue?**
+  - Premium segment ($500+) and mid-range ($50-100) drive majority of revenue
+  - 50% of products priced under $46
 
-- **Power BI** - Interactive dashboard creation and visualization
-- **Python 3** - Data processing and analysis
-- **Pandas** - Data manipulation and cleaning
-- **Excel** - Data storage and export
-- **HTML/CSS/JavaScript** - Web-based dashboard
-
-## 📋 Prerequisites
-
-To run this project locally, you'll need:
-
-- **Power BI Desktop** (to open `.pbix` files)
-- **Python 3.7+** (to run analysis scripts)
-- **Required Python libraries**:
-  - pandas
-  - openpyxl
-  - json
-
-## 🚀 Getting Started
-
-### 1. View the Power BI Dashboard
-- Open `amazon dash board.pbix` in Power BI Desktop
-- Navigate through different tabs to explore sales insights
-- Use filters to drill down into specific time periods or categories
-
-### 2. View the HTML Dashboard
-- Simply open `Amazon_Sales_Dashboard.html` in any web browser
-- No installation required - fully standalone
-- Ideal for sharing with stakeholders
-
-### 3. Run Python Analysis Scripts
-
-```bash
-# Install required packages
-pip install pandas openpyxl
-
-# Generate dashboard data from raw Excel file
-python create_dashboard_data.py
-
-# Run detailed data analysis
-python analyze_data.py
-
-# Generate HTML dashboard
-python create_html_dashboard.py
-```
-
-### 4. Review Documentation
-- See `PowerBI_Dashboard_Instructions.md` for detailed dashboard navigation
-- Check `DATA_ANALYSIS_SUMMARY.md` for comprehensive findings
-
-## 📊 Dashboard Components
-
-### Main Dashboard Tabs
-1. **Overview** - High-level KPIs and sales summary
-2. **Products** - Product performance and category analysis
-3. **Trends** - Temporal patterns and seasonal analysis
-4. **Geography** (if applicable) - Location-based insights
-
-### Key Visualizations
-- Sales trend line charts
-- Category performance bar charts
-- Top products rankings
-- Day-of-week heatmaps
-- Price range distribution
-
-## 💾 Data Files
-
-| File | Description | Format |
-|------|-------------|--------|
-| `Amazon_Combined_Data.xlsx` | Raw, uncleaned data | Excel |
-| `Amazon_Combined_Data_Cleaned.xlsx` | Processed data ready for analysis | Excel |
-| `SalesByMonth.csv` | Aggregated monthly sales | CSV |
-| `SalesByCategory.csv` | Sales breakdown by category | CSV |
-| `Top5Products.csv` | Top performing products | CSV |
+- **How engaged are customers with products?**
+  - Men's Clothes category has highest engagement (18.9M reviews)
+  - Average product receives 658 reviews
 
 ## 📈 Key Findings
 
-Refer to `DATA_ANALYSIS_SUMMARY.md` for detailed insights including:
-- Best-performing product categories
-- Seasonal trends and peak sales periods
-- Price sensitivity analysis
-- Growth trends over time
+**Top Revenue Categories**
+| Rank | Category | Revenue | % Total |
+|------|----------|---------|--------|
+| 1 | Camera | $2.48M | 29.4% |
+| 2 | Men Shoes | $2.23M | 26.5% |
+| 3 | Men Clothes | $1.16M | 13.8% |
 
-## 🔄 Data Pipeline
+**Best-Selling Products (All-Time)**
+1. Atomos Ninja V Camera — $107,191
+2. Canal Toys Photo Creator — $75,857
+3. Solid Gear Hydra Safety Shoe — $66,361
+4. KODAK Step Slim Printer — $60,968
+5. Vince Camuto Dress Shoe — $46,260
+
+**Seasonal Trends**
+- Q4 consistently outperforms other quarters
+- December shows sustained high sales across all years
+- Monthly volatility suggests promotional/seasonal factors
+
+## 🗂️ Dataset
+
+**Source:** Amazon sales transactions (4-year period)
+**Records:** 88,947 transactions (after cleaning)
+**Time Period:** January 3, 2019 — December 31, 2022
+**Data Quality:** 99.85% complete
+
+**Key Fields:**
+- Product Category (8 categories)
+- Product Description
+- Sale Price
+- Number of Customer Reviews
+- Order Date
+- Shipment Type
+
+## 🧹 Data Cleaning & Preparation
+
+**Cleaning Steps Performed:**
+- ✅ Column name standardization
+- ✅ Data type conversion (numeric prices, datetime stamps)
+- ✅ Missing value handling (median imputation for prices, 0 for reviews)
+- ✅ Duplicate removal (135 rows eliminated)
+- ✅ Invalid date removal
+- ✅ Temporal feature engineering (Year, Month, Quarter, Day of Week)
+
+**Results:**
+- Original rows: 89,082
+- Cleaned rows: 88,947
+- Rows removed: 135 (0.15%)
+- Final data quality: 100% complete
+
+## 🔍 Analysis Performed
+
+**Exploratory Data Analysis:**
+- Descriptive statistics on prices and review counts
+- Category-level aggregation and ranking
+- Time-series decomposition by month and year
+- Product performance ranking
+- Weekly pattern analysis
+- Price distribution analysis
+
+**Data Exports:**
+- Monthly sales trends (48 months)
+- Category performance metrics
+- Top 5 products overall and per-year
+- Day-of-week sales patterns
+- Price range distribution
+
+## 📊 Dashboard
+
+### Interactive HTML Dashboard
+An interactive Plotly-based dashboard is included with 6 visualizations:
+
+1. **Sales Trend by Month** — Line chart showing revenue trajectory
+2. **Sales by Category** — Bar chart ranking categories
+3. **Top 5 Products** — Product performance comparison
+4. **Top 5 by Year** — Year-over-year product winners
+5. **Sales by Day of Week** — Weekly pattern analysis
+6. **Revenue by Price Tier** — Price range distribution
+
+**View the dashboard:** Open `dashboards/Amazon_Sales_Dashboard.html` in any web browser (fully interactive, no installation required)
+
+## 🛠️ Tech Stack
+
+- **Python 3** — Data processing and analysis
+- **Pandas** — Data manipulation and aggregation
+- **Plotly** — Interactive visualizations
+- **Excel** — Data storage
+- **Markdown** — Documentation
+
+## 📁 Repository Structure
 
 ```
-Raw Data (Excel) 
-    ↓
-Data Cleaning (analyze_data.py)
-    ↓
-Cleaned Data (Excel)
-    ↓
-Dashboard Creation (Power BI / HTML)
-    ↓
-Export CSVs (create_dashboard_data.py)
-    ↓
-Interactive Visualizations
+amazon-sales-dashboard/
+│
+├── README.md                           # This file
+├── requirements.txt                    # Python dependencies
+├── INSTALLATION.md                     # Setup and reproduction guide
+│
+├── src/                                # Python analysis scripts
+│   ├── analyze_data.py                # Data cleaning and EDA
+│   └── create_dashboard_data.py       # Export aggregations for dashboards
+│
+├── data/
+│   ├── raw/
+│   │   └── Amazon_Combined_Data.xlsx   # Original data (4 years)
+│   └── processed/
+│       ├── Amazon_Combined_Data_Cleaned.xlsx  # Cleaned dataset
+│       └── exports/                           # CSV files
+│           ├── SalesByMonth.csv
+│           ├── SalesByCategory.csv
+│           ├── Top5Products.csv
+│           ├── Top5ProductsByYear.csv
+│           ├── SalesByDayOfWeek.csv
+│           ├── SalesByYear.csv
+│           └── SalesByPriceRange.csv
+│
+├── dashboards/
+│   └── Amazon_Sales_Dashboard.html     # Interactive dashboard
+│
+├── docs/
+│   ├── PowerBI_Dashboard_Instructions.md    # How to build in Power BI
+│   └── DATA_ANALYSIS_SUMMARY.md             # Detailed findings
+│
+└── .gitignore
 ```
 
-## 🎨 Customization
+## 🚀 How to Use
 
-### Modifying the Power BI Dashboard
-1. Open `amazon dash board.pbix` in Power BI Desktop
-2. Edit visualizations by clicking on them
-3. Add new measures and columns as needed
-4. Publish to Power BI Service for cloud sharing
+### Quick Start (No Installation)
+1. Open `dashboards/Amazon_Sales_Dashboard.html` in any web browser
+2. Interact with the visualizations — hover, zoom, toggle series
 
-### Updating Data
-1. Update `Amazon_Combined_Data.xlsx` with new data
-2. Run `create_dashboard_data.py` to refresh CSVs
-3. Refresh Power BI dataset (Right-click → Refresh)
+### To Reproduce the Analysis
 
-## 📝 Files Reference
+**Step 1: Install Python dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-- **PowerBI_Dashboard_Instructions.md** - Comprehensive guide for using the Power BI dashboard
-- **DATA_ANALYSIS_SUMMARY.md** - Detailed statistical analysis and findings
-- **DashboardInfo.json** - Metadata about dashboard configuration
-- **summary.json** - Quantitative summary of key metrics
+**Step 2: Run data cleaning**
+```bash
+python src/analyze_data.py
+```
+This generates the cleaned dataset and summary statistics.
 
-## 🤝 Contributing
+**Step 3: Export dashboard data**
+```bash
+python src/create_dashboard_data.py
+```
+This creates CSV exports for visualization.
 
-Feel free to fork this project and enhance it with:
-- Additional visualizations
-- Forecasting models
-- Real-time data integration
-- Performance optimizations
+**Step 4: View the dashboard**
+Open `dashboards/Amazon_Sales_Dashboard.html` in your browser.
 
-## 📧 Contact & Support
+### Alternative: Power BI
+For building a Power BI dashboard:
+1. Follow instructions in `docs/PowerBI_Dashboard_Instructions.md`
+2. Use cleaned data: `data/processed/Amazon_Combined_Data_Cleaned.xlsx`
+3. Use CSV exports from `data/processed/exports/`
 
-For questions or suggestions about this project, please reach out or open an issue.
+## 📌 Limitations & Considerations
 
-## 📜 License
+**Data Limitations:**
+- Historical data only (no real-time updates)
+- Limited to Amazon product categories shown
+- No customer demographic information
+- No profit/cost data (revenue analysis only)
+- No return/refund data (sales only)
 
-This project is open source and available for educational and commercial use.
+**Analysis Scope:**
+- This is retrospective analysis of completed transactions
+- Patterns may not hold for future periods
+- Seasonal effects observed may vary by year
+- Product performance rankings based on revenue, not profit margin
+
+## 🔮 Potential Future Enhancements
+
+- **Automated Pipeline:** Connect to live data source with scheduled refreshes
+- **Forecasting:** Build time-series models to predict future sales
+- **Customer Segmentation:** Cluster customers by purchase behavior
+- **Cohort Analysis:** Track customer groups over time
+- **Profit Analysis:** Incorporate cost data for margin analysis
+- **Sentiment Analysis:** Extract insights from review text
+- **Real-time Dashboard:** Publish to Power BI Service for live updates
+
+## 📚 Files Reference
+
+| File | Purpose |
+|------|---------|
+| `README.md` | Project overview (this file) |
+| `INSTALLATION.md` | Detailed setup and reproduction steps |
+| `requirements.txt` | Python package dependencies |
+| `src/analyze_data.py` | Main data cleaning and analysis script |
+| `src/create_dashboard_data.py` | Export script for dashboard datasets |
+| `docs/DATA_ANALYSIS_SUMMARY.md` | Comprehensive analytical findings |
+| `docs/PowerBI_Dashboard_Instructions.md` | Step-by-step Power BI guide |
+
+## 🎓 Skills Demonstrated
+
+This portfolio project demonstrates:
+
+- **Data Cleaning** — Handling missing values, duplicates, type conversions
+- **Exploratory Data Analysis** — Descriptive statistics, distributions, patterns
+- **Feature Engineering** — Creating temporal and categorical features
+- **Data Aggregation** — Group-by operations, multi-level analysis
+- **Data Visualization** — Interactive charts and professional dashboards
+- **Documentation** — Clear guides for reproducibility
+- **Business Acumen** — Deriving actionable insights from data
+
+## 📧 Questions?
+
+Refer to the documentation files for detailed information. All analysis is reproducible using the Python scripts and included datasets.
 
 ---
 
-**Last Updated**: September 2026
-
-**Version**: 1.0
-
-**Author**: Data Analyst Portfolio
-
----
-
-## 🔗 Related Resources
-
-- [Power BI Official Documentation](https://docs.microsoft.com/en-us/power-bi/)
-- [Pandas Documentation](https://pandas.pydata.org/)
-- [Data Analysis Best Practices](https://www.example.com)
-
-## ✅ Checklist for Dashboard Usage
-
-- [ ] Installed Power BI Desktop
-- [ ] Opened the .pbix file successfully
-- [ ] Reviewed the DATA_ANALYSIS_SUMMARY.md
-- [ ] Explored all dashboard tabs
-- [ ] Opened the HTML dashboard in browser
-- [ ] Reviewed the instructions document
-
----
-
-**Note**: Power BI files (.pbix) are binary files and may be large. The HTML dashboard provides a lightweight alternative for viewing and sharing insights.
+**Project Created:** August 2026  
+**Analysis Period:** January 2019 — December 2022  
+**Data Quality:** 99.85% Complete  
+**Status:** ✅ Complete & Ready for Review
