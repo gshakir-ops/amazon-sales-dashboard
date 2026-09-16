@@ -1,0 +1,26 @@
+{
+  "DashboardName": "Amazon Sales Analytics Dashboard",
+  "CreatedDate": "2026-08-30 14:06:00",
+  "DataSource": "Amazon_Combined_Data.xlsx",
+  "TotalRecords": 88947,
+  "DateRange": "2019-01-03 to 2022-12-31",
+  "KPIs": {
+    "TotalSales": 8409992.0,
+    "TotalReviews": 58516965,
+    "TotalSold": 88947
+  },
+  "Charts": [
+    "Sales by Month (Line Chart)",
+    "Sales by Product Category (Bar Chart)",
+    "Top 5 Products (Bar Chart)",
+    "Top 5 Products by Year (Clustered Bar Chart)",
+    "Sales by Day of Week (Column Chart - Bonus)",
+    "Sales by Price Range (Donut Chart - Bonus)"
+  ],
+  "Filters": [
+    "Year (Slicer)",
+    "Product Category (Slicer)",
+    "Month (Slicer)",
+    "Date Range (Date Slicer)"
+  ]
+}
